@@ -20,6 +20,7 @@ import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 
+
 const Item = ({title, to, icon, selected, setSelected}) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
@@ -157,24 +158,25 @@ const Sidebar = () => {
                             color={colors.grey[300]}
                             sx={{ m: isCollapsed && isMobile ? "5px 0 5px 10px" : "5px 0 5px 20px" }}
                         >
-                            Data
+                            Categories
                         </Typography>
+
                         <Item 
-                            title="Manage Team"
+                            title="Students"
                             to="/team"
                             icon={<PeopleOutlinedIcon/>}
                             selected= {selected}
                             setSelected={setSelected}
                         />
                         <Item 
-                            title="Contacts Information"
+                            title="Staff"
                             to="/contacts"
                             icon={<ContatcsOutlinedIcon/>}
                             selected= {selected}
                             setSelected={setSelected}
                         />
                         <Item 
-                            title="Invoices Balances"
+                            title="Guardians"
                             to="/invoices"
                             icon={<ReceiptOutlinedIcon/>}
                             selected= {selected}
