@@ -18,6 +18,7 @@ import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import NestedList from "../../components/Testbox/List.tsx";
 
 
 
@@ -145,109 +146,9 @@ const Sidebar = () => {
                         </Box>
                     )}
                     {/*MENU ITEMS */}
-                    <Box paddingLeft={isCollapsed ? undefined : "10%"}>
-                        <Item 
-                            title="Dashboard"
-                            to="/"
-                            icon={<HomeOutlinedIcon/>}
-                            selected= {selected}
-                            setSelected={setSelected}
-                        />
-                        <Typography
-                            variant="h6"
-                            color={colors.grey[300]}
-                            sx={{ m: isCollapsed && isMobile ? "5px 0 5px 10px" : "5px 0 5px 20px" }}
-                        >
-                            Categories
-                        </Typography>
+                  
 
-                        <Item 
-                            title="Students"
-                            to="/team"
-                            icon={<PeopleOutlinedIcon/>}
-                            selected= {selected}
-                            setSelected={setSelected}
-                        />
-                        <Item 
-                            title="Staff"
-                            to="/contacts"
-                            icon={<ContatcsOutlinedIcon/>}
-                            selected= {selected}
-                            setSelected={setSelected}
-                        />
-                        <Item 
-                            title="Guardians"
-                            to="/invoices"
-                            icon={<ReceiptOutlinedIcon/>}
-                            selected= {selected}
-                            setSelected={setSelected}
-                        />
-                        <Typography
-                            variant="h6"
-                            color={colors.grey[300]}
-                            sx={{ m: isCollapsed && isMobile ? "5px 0 5px 10px" : "5px 0 5px 20px" }}
-                            >
-                            Pages
-                        </Typography>
-                        <Item 
-                            title="Profile Form"
-                            to="/form"
-                            icon={<PersonOutlinedIcon/>}
-                            selected= {selected}
-                            setSelected={setSelected}
-                        />
-                        <Item 
-                            title="Calender"
-                            to="/calender"
-                            icon={<CalendarTodayOutlinedIcon/>}
-                            selected= {selected}
-                            setSelected={setSelected}
-                        />
-                        <Item 
-                            title="FAQ Page"
-                            to="/faq"
-                            icon={<HelpOutlinedIcon/>}
-                            selected= {selected}
-                            setSelected={setSelected}
-                        />
-                        <Typography
-                            variant="h6"
-                            color={colors.grey[300]}
-                            sx={{ m: isCollapsed && isMobile ? "5px 0 5px 10px" : "5px 0 5px 20px" }}
-                        >
-                            Charts
-                        </Typography>
-                        <Item 
-                            title="Bar Chart"
-                            to="/bar"
-                            icon={<BarChartOutlinedIcon/>}
-                            selected= {selected}
-                            setSelected={setSelected}
-                        />
-                        <Item 
-                            title="Pie Chart"
-                            to="/pie"
-                            icon={<PieChartOutlineOutlinedIcon/>}
-                            selected= {selected}
-                            setSelected={setSelected}
-                        />
-                        <Item 
-                            title="Line Chart"
-                            to="/line"
-                            icon={<TimelineOutlinedIcon/>}
-                            selected= {selected}
-                            setSelected={setSelected}
-                        />
-                        <Item 
-                            title="Geography Chart"
-                            to="/geography"
-                            icon={<MapOutlinedIcon/>}
-                            selected= {selected}
-                            setSelected={setSelected}
-                        />
-                        
-
-                    </Box>
+                <NestedList />
 
                 </Menu>
 

@@ -4,7 +4,7 @@ import {Routes, Route} from "react-router-dom";
 import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import Topbar from "./scenes/gloabal/Topbar";
-import Sidebar from './scenes/gloabal/Sidebar';
+//import Sidebar from './scenes/gloabal/Sidebar';
 import Dashboard from "./scenes/dashboard";
 import Team from "./scenes/team";
 import Invoices from "./scenes/invoices";
@@ -18,6 +18,8 @@ import Geography from "./scenes/geography";
 import Calender from "./scenes/calender";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+//Testbox
+import Sidebar from './components/Testbox/TestSidebar.tsx';
 
 
 
