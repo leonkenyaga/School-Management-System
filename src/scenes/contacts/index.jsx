@@ -30,7 +30,7 @@ const Contacts =()=> {
 
     const columns = [
     {field: "id", headerName: "ID", flex: 0.5},
-    {field: "registrarId", headerName: "Registrar ID", flex:  1},
+    {field: "adminno", headerName: "Admin No", flex:  1},
 
     {
         field: "name",
@@ -72,7 +72,7 @@ const Contacts =()=> {
     },
 ];
 const columnVisibilityModel = {
-    registrarId: !matches && !isSmallScreen,
+    adminno: !matches && !isSmallScreen,
     age: !matches && !isSmallScreen,
     address: !matches && !isSmallScreen,
     city: !matches && !isSmallScreen,
