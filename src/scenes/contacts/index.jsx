@@ -34,20 +34,20 @@ const Contacts =()=> {
 
     {
         field: "name",
-        headerName: "NAME",
+        headerName: "Name",
         flex:  1,
         cellClassName: "name-column--cell"
     },
     {
-        field: "age",
-        headerName: "Age",
+        field: "grade",
+        headerName: "Grade",
         type: "number",
         headerAlign: "left",
         align: "left",
     },
     {
-        field: "phone",
-        headerName: "Phone Number",
+        field: "status",
+        headerName: "Status",
         flex: 1
     },
     {
@@ -56,33 +56,39 @@ const Contacts =()=> {
         flex: 1
     },
     {
-        field: "address",
-        headerName: "Address",
+        field: "guardian",
+        headerName: "Guardian",
         flex: 1
     },
     {
-        field: "city",
-        headerName: "City",
+        field: "county",
+        headerName: "County",
         flex: 1
     },
     {
-        field: "zipCode",
-        headerName: "Zip Code",
+        field: "admissiondate",
+        headerName: "Admission Date",
+        flex: isSmallScreen ? 0.5 : 1
+    },
+    {
+        field: "gender",
+        headerName: "Gender",
         flex: isSmallScreen ? 0.5 : 1
     },
 ];
 const columnVisibilityModel = {
     adminno: !matches && !isSmallScreen,
-    age: !matches && !isSmallScreen,
-    address: !matches && !isSmallScreen,
-    city: !matches && !isSmallScreen,
+    grade: !matches && !isSmallScreen,
+    guardian: !matches && !isSmallScreen,
+    county: !matches && !isSmallScreen,
     email: !matches && !isSmallScreen,
-    zipCode: !matches && !isSmallScreen,
+    admissiondate: !matches && !isSmallScreen,
+    gender: !matches && !isSmallScreen,
     };
 
     return (
         <Box m={{xs:"10px", md:"20px"}}>
-            <Header title="CONTACTS" subtitle="List of contatcs for future reference"/>
+            <Header title="Students" subtitle="List of Students"/>
             <Box
             m={{ xs: "0px", md: "40px" }}
             mt={{ xs: "0px", md: "40px" }}
