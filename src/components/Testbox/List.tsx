@@ -49,7 +49,7 @@ function NestedList() {
       </ListItemButton>
       <Collapse in={openStudents} timeout="auto" unmountOnExit>
       <AddCollapse tag= "Add Students" to= "/form"/>
-      <ViewCollapse tag="View Student" to="/team"/>
+      <ViewCollapse tag="View Student" to="/contacts"/>
       </Collapse>
       <ListItemButton onClick={handleClickStaff}>
         <ListItemIcon>
