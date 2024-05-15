@@ -9,21 +9,30 @@ const initialValues = {
     firstName: "",
     lastName: "",
     email: "",
-    contact: "",
-    address1: "",
-    address2: "",
+    grade: "",
+    status: "",
+    admissionnumber: "",
+    guardian: "",
+    county: "",
+    admissiondate: "",
+    gender:""
 };
 
-const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+//const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
 
 const userSchema = yup.object().shape({
     firstName: yup.string().required("required"),
     lastName: yup.string().required("required"),
     email: yup.string().email("invalid email").required("required"),
-    contact: yup.string().matches(phoneRegExp, "Phone number is not valid").required("required"),
-    address1: yup.string().required("required"),
-    address2: yup.string().required("required"),
+    //contact: yup.string().matches(phoneRegExp, "Phone number is not valid").required("required"),
+    grade: yup.string().required("required"),
+    status: yup.string().required("required"),
+    admissionnumber: yup.string().required("required"),
+    guardian: yup.string().required("required"),
+    county: yup.string().required("required"),
+    admissiondate: yup.string().required("required"),
+    gender: yup.string().required("required"),
 });
 
 const Form = () => {
@@ -33,7 +42,7 @@ const Form = () => {
     }
     return(
     <Box m="20px">
-        <Header title="CREATE USER" subtitle="Create a New User Profile "></Header>
+        <Header title="ADD STUDENT" subtitle="Create a New Student Profile "></Header>
         <Formik
         onSubmit={handleFormSubmit}
         initialValues={initialValues}
@@ -100,45 +109,97 @@ const Form = () => {
                         fullWidth
                         variant="filled"
                         type="text"
-                        label="Contact Number"
+                        label="Grade"
                         onBlur={handleBlur}
                         onChange={handleChange}
-                        value={values.contact}
-                        name="contact"
-                        error={!!touched.contact && !!errors.contact}
-                        helperText={touched.contact && errors.contact}
+                        value={values.grade}
+                        name="grade"
+                        error={!!touched.grade && !!errors.grade}
+                        helperText={touched.grade && errors.grade}
                         sx={{ gridColumn: "span 4" }}
                         />
                         <TextField
                         fullWidth
                         variant="filled"
                         type="text"
-                        label="Address 1"
+                        label="Status"
                         onBlur={handleBlur}
                         onChange={handleChange}
-                        value={values.address1}
-                        name="address1"
-                        error={!!touched.address1 && !!errors.address1}
-                        helperText={touched.address1 && errors.address1}
+                        value={values.status}
+                        name="status"
+                        error={!!touched.status && !!errors.status}
+                        helperText={touched.status && errors.status}
                         sx={{ gridColumn: "span 4" }}
                         />
                         <TextField
                         fullWidth
                         variant="filled"
                         type="text"
-                        label="Address 2"
+                        label="Admission Number"
                         onBlur={handleBlur}
                         onChange={handleChange}
-                        value={values.address2}
-                        name="address2"
-                        error={!!touched.address2 && !!errors.address2}
-                        helperText={touched.address2 && errors.address2}
+                        value={values.admissionnumber}
+                        name="admissionnumber"
+                        error={!!touched.admissionnumber && !!errors.admissionnumber}
+                        helperText={touched.admissionnumber && errors.admissionnumber}
+                        sx={{ gridColumn: "span 4" }}
+                        />
+                                                <TextField
+                        fullWidth
+                        variant="filled"
+                        type="text"
+                        label="Guardian"
+                        onBlur={handleBlur}
+                        onChange={handleChange}
+                        value={values.guardian}
+                        name="guardian"
+                        error={!!touched.guardian && !!errors.guardian}
+                        helperText={touched.guardian && errors.guardian}
+                        sx={{ gridColumn: "span 4" }}
+                        />
+                                                <TextField
+                        fullWidth
+                        variant="filled"
+                        type="text"
+                        label="County"
+                        onBlur={handleBlur}
+                        onChange={handleChange}
+                        value={values.county}
+                        name="county"
+                        error={!!touched.county && !!errors.county}
+                        helperText={touched.county && errors.county}
+                        sx={{ gridColumn: "span 4" }}
+                        />
+                                                <TextField
+                        fullWidth
+                        variant="filled"
+                        type="text"
+                        label="Admission Date"
+                        onBlur={handleBlur}
+                        onChange={handleChange}
+                        value={values.admissiondate}
+                        name="admissiondate"
+                        error={!!touched.admissiondate && !!errors.admissiondate}
+                        helperText={touched.admissiondate && errors.admissiondate}
+                        sx={{ gridColumn: "span 4" }}
+                        />
+                                         <TextField
+                        fullWidth
+                        variant="filled"
+                        type="text"
+                        label="Gender"
+                        onBlur={handleBlur}
+                        onChange={handleChange}
+                        value={values.gender}
+                        name="gender"
+                        error={!!touched.gender && !!errors.gender}
+                        helperText={touched.gender && errors.gender}
                         sx={{ gridColumn: "span 4" }}
                         />
                     </Box>
                     <Box display="flex" justifyContent="end" mt="20px">
                         <Button type="submit" color="secondary" variant="contained">
-                            Create New User
+                            Add New Student
                         </Button>
                     </Box>
 
